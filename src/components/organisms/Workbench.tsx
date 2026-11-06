@@ -9,6 +9,7 @@ import { CommandPalette } from './CommandPalette'
 import { EditorArea } from './EditorArea'
 import { Explorer } from './Explorer'
 import { StatusBar } from './StatusBar'
+import { Terminal } from './Terminal'
 import { TitleBar } from './TitleBar'
 
 export function Workbench() {
@@ -26,7 +27,7 @@ export function Workbench() {
         <Explorer />
         <EditorArea />
       </div>
-      <div />
+      <Terminal />
       <StatusBar />
       <CommandPalette />
     </motion.div>

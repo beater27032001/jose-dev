@@ -1,7 +1,7 @@
 import { baseName, FILES, findFile, filesIn } from './files.ts'
 import { CONTACT, PERSON } from './profile.ts'
 
-export type Tone = 'ok' | 'err' | 'dim'
+export type Tone = 'ok' | 'err' | 'dim' | 'cmd'
 export interface Line {
   text: string
   tone?: Tone
