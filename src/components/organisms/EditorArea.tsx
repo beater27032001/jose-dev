@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { ChevronRight } from 'lucide-react'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 
 import { Kbd } from '@atoms/Kbd'
 import { FILE_MAP, README } from '@domain/files'
@@ -50,13 +50,21 @@ function Empty() {
   )
 }
 
+// O primeiro arquivo chega visível no HTML do servidor; o fade é só para trocas de aba.
+let firstFileShown = false
+
 function FileView({ path }: { path: string }) {
   const { editor, dispatch } = useWorkbench()
   const isMarkdown = FILE_MAP.get(path)?.lang === 'markdown'
   const showSource = editor.source.includes(path)
+  const reduced = useReducedMotion()
+  const [fade] = useState(() => firstFileShown && !reduced)
+  useEffect(() => {
+    firstFileShown = true
+  }, [])
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={fade ? { opacity: 0 } : false}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.18 }}
     >

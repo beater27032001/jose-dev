@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 import { ChevronRight } from 'lucide-react'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 
 import { FileIcon, FolderIcon } from '@atoms/FileIcon'
 import { baseName, filesIn, FOLDERS, rootFiles } from '@domain/files'
@@ -19,7 +19,9 @@ const itemClass =
 export function ExplorerTree({ onPick }: { onPick: () => void }) {
   const { editor, dispatch } = useWorkbench()
   // decidido uma vez ao montar; recalcular em outro render deixaria os itens presos invisíveis
-  const [animate] = useState(() => !booted)
+  const [firstOpen] = useState(() => !booted)
+  const reduced = useReducedMotion()
+  const animate = firstOpen && !reduced
   useEffect(() => {
     booted = true
   }, [])
@@ -29,8 +31,9 @@ export function ExplorerTree({ onPick }: { onPick: () => void }) {
     const i = order++
     return animate
       ? {
-          initial: { opacity: 0, x: -6 },
-          animate: { opacity: 1, x: 0 },
+          // só deslocamento: o item já está visível no HTML do servidor
+          initial: { x: -8 },
+          animate: { x: 0 },
           transition: { delay: 0.25 + i * 0.03, duration: 0.3 },
         }
       : {}

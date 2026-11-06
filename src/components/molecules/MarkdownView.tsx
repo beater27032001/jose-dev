@@ -2,7 +2,7 @@
 
 import { Fragment, useEffect, useState, type ReactNode } from 'react'
 
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 import Image from 'next/image'
 
 import { EASE } from '@constants/motion'
@@ -167,7 +167,9 @@ let booted = false
 export function MarkdownView({ path }: { path: string }) {
   const blocks = parse(FILE_MAP.get(path)?.text ?? '')
   // decidido uma vez ao montar; recalcular em outro render deixaria os itens presos invisíveis
-  const [animate] = useState(() => !booted)
+  const [firstOpen] = useState(() => !booted)
+  const reduced = useReducedMotion()
+  const animate = firstOpen && !reduced
   useEffect(() => {
     booted = true
   }, [])
@@ -178,8 +180,8 @@ export function MarkdownView({ path }: { path: string }) {
         <Fragment key={i}>
           {animate ? (
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 12 }}
+              animate={{ y: 0 }}
               transition={{ delay: 0.3 + i * 0.06, duration: 0.5, ease: EASE }}
             >
               {render(block)}
