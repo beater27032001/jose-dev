@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+
+@custom-variant light (&:where([data-theme='light'], [data-theme='light'] *));
+
+/* Tokens do editor; os dois temas trocam só estas variáveis. */
+:root,
+[data-theme='dark'] {
+  --bg: #0f1115;
+  --side: #14171c;
+  --bar: #0b0d10;
+  --tab: #181b21;
+  --line: #23272f;
+  --fg: #d7dae0;
+  --muted: #7d8590;
+  --accent: #e5a54b;
+  --on-accent: #1a1205;
+  --sel: #1f2a3a;
+  --hover: rgb(127 127 127 / 0.1);
+  --t-kw: #c792ea;
+  --t-str: #a5d86f;
+  --t-num: #f78c6c;
+  --t-com: #808893;
+  --t-key: #82aaff;
+  --t-type: #ffcb6b;
+  --t-punct: #a9b1bc;
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg: #fbfbfa;
+  --side: #f2f2ef;
+  --bar: #e8e8e4;
+  --tab: #efefeb;
+  --line: #dcdcd6;
+  --fg: #24262b;
+  --muted: #5f636b;
+  --accent: #9a5c0e;
+  --on-accent: #ffffff;
+  --sel: #e3ebf6;
+  --hover: rgb(127 127 127 / 0.12);
+  --t-kw: #8a3fc7;
+  --t-str: #3c7f1f;
+  --t-num: #b0480f;
+  --t-com: #6b717a;
+  --t-key: #2f5fc4;
+  --t-type: #8a5f00;
+  --t-punct: #4a4e56;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-side: var(--side);
+  --color-bar: var(--bar);
+  --color-tab: var(--tab);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-sel: var(--sel);
+  --color-hover: var(--hover);
+  --color-t-kw: var(--t-kw);
+  --color-t-str: var(--t-str);
+  --color-t-num: var(--t-num);
+  --color-t-com: var(--t-com);
+  --color-t-key: var(--t-key);
+  --color-t-type: var(--t-type);
+  /* variáveis do next/font, definidas no <html> pelo layout */
+  --font-code: var(--font-jetbrains), ui-monospace, Menlo, monospace;
+  --font-ui: var(--font-plex), system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-ui);
+    font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
+    caret-color: var(--accent);
+    transition:
+      background-color 0.25s,
+      color 0.25s;
+  }
+  button {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: -1px;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--muted) 45%, transparent)
+      transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--muted) 40%, transparent);
+    border: 3px solid transparent;
+    border-radius: 99px;
+    background-clip: padding-box;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
