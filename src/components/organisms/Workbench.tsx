@@ -2,13 +2,17 @@
 
 import { motion } from 'motion/react'
 
+import { useShortcuts } from '@hooks/useShortcuts'
+
 import { ActivityBar } from './ActivityBar'
+import { CommandPalette } from './CommandPalette'
 import { EditorArea } from './EditorArea'
 import { Explorer } from './Explorer'
 import { StatusBar } from './StatusBar'
 import { TitleBar } from './TitleBar'
 
 export function Workbench() {
+  useShortcuts()
   return (
     <motion.div
       className="grid h-dvh grid-rows-[36px_minmax(0,1fr)_auto_24px] overflow-hidden"
@@ -24,6 +28,7 @@ export function Workbench() {
       </div>
       <div />
       <StatusBar />
+      <CommandPalette />
     </motion.div>
   )
 }
