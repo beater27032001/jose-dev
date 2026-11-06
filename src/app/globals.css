@@ -124,3 +124,36 @@
     transition: none !important;
   }
 }
+
+/* Shiki usa estas variáveis; elas apontam para os tokens do tema ativo. */
+:root {
+  --shiki-foreground: var(--fg);
+  --shiki-background: transparent;
+  --shiki-token-constant: var(--t-num);
+  --shiki-token-string: var(--t-str);
+  --shiki-token-string-expression: var(--t-str);
+  --shiki-token-comment: var(--t-com);
+  --shiki-token-keyword: var(--t-kw);
+  --shiki-token-parameter: var(--t-type);
+  --shiki-token-function: var(--t-key);
+  --shiki-token-punctuation: var(--t-punct);
+  --shiki-token-link: var(--accent);
+}
+
+/* Ícones de tipo de arquivo, com contraste nos dois temas */
+:root,
+[data-theme='dark'] {
+  --i-md: #5fb3f0;
+  --i-tsx: #4fc1ff;
+  --i-ts: #5b9bf0;
+  --i-json: #e5c07b;
+  --dot-r: #ff5f57;
+  --dot-y: #febc2e;
+  --dot-g: #28c840;
+}
+[data-theme='light'] {
+  --i-md: #1f6fb2;
+  --i-tsx: #0f7fae;
+  --i-ts: #2f5fc4;
+  --i-json: #8a5f00;
+}
