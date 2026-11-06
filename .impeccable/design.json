@@ -1,0 +1,994 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T03:19:50+00:00",
+  "title": "Design System: jose-dev",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Fundo do Editor",
+        "canonical": "#0f1115",
+        "cssVar": "--bg",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.009 264)",
+          "oklch(26% 0.009 264)",
+          "oklch(38% 0.009 264)",
+          "oklch(49% 0.009 264)",
+          "oklch(61% 0.009 264)",
+          "oklch(72% 0.009 264)",
+          "oklch(84% 0.009 264)",
+          "oklch(95% 0.009 264)"
+        ]
+      },
+      "side": {
+        "role": "neutral",
+        "displayName": "Lateral",
+        "canonical": "#14171c",
+        "cssVar": "--side",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.002 261)",
+          "oklch(26% 0.006 261)",
+          "oklch(38% 0.010 261)",
+          "oklch(49% 0.011 261)",
+          "oklch(61% 0.011 261)",
+          "oklch(72% 0.010 261)",
+          "oklch(84% 0.006 261)",
+          "oklch(95% 0.002 261)"
+        ]
+      },
+      "bar": {
+        "role": "neutral",
+        "displayName": "Barra",
+        "canonical": "#0b0d10",
+        "cssVar": "--bar",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.007 258)",
+          "oklch(26% 0.007 258)",
+          "oklch(38% 0.007 258)",
+          "oklch(49% 0.007 258)",
+          "oklch(61% 0.007 258)",
+          "oklch(72% 0.007 258)",
+          "oklch(84% 0.007 258)",
+          "oklch(95% 0.007 258)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Linha",
+        "canonical": "#23272f",
+        "cssVar": "--line",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.002 264)",
+          "oklch(26% 0.008 264)",
+          "oklch(38% 0.014 264)",
+          "oklch(49% 0.016 264)",
+          "oklch(61% 0.016 264)",
+          "oklch(72% 0.014 264)",
+          "oklch(84% 0.008 264)",
+          "oklch(95% 0.002 264)"
+        ]
+      },
+      "fg": {
+        "role": "neutral",
+        "displayName": "Texto",
+        "canonical": "#d7dae0",
+        "cssVar": "--fg",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.009 265)",
+          "oklch(26% 0.009 265)",
+          "oklch(38% 0.009 265)",
+          "oklch(49% 0.009 265)",
+          "oklch(61% 0.009 265)",
+          "oklch(72% 0.009 265)",
+          "oklch(84% 0.009 265)",
+          "oklch(95% 0.009 265)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Texto Apagado",
+        "canonical": "#7d8590",
+        "cssVar": "--muted",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.003 256)",
+          "oklch(26% 0.010 256)",
+          "oklch(38% 0.017 256)",
+          "oklch(49% 0.019 256)",
+          "oklch(61% 0.019 256)",
+          "oklch(72% 0.017 256)",
+          "oklch(84% 0.010 256)",
+          "oklch(95% 0.003 256)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Âmbar Cursor",
+        "canonical": "#e5a54b",
+        "cssVar": "--accent",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.020 73)",
+          "oklch(26% 0.066 73)",
+          "oklch(38% 0.112 73)",
+          "oklch(49% 0.130 73)",
+          "oklch(61% 0.130 73)",
+          "oklch(72% 0.112 73)",
+          "oklch(84% 0.066 73)",
+          "oklch(95% 0.020 73)"
+        ]
+      },
+      "on-accent": {
+        "role": "primary",
+        "displayName": "Texto sobre Âmbar",
+        "canonical": "#1a1205",
+        "cssVar": "--on-accent",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.004 80)",
+          "oklch(26% 0.014 80)",
+          "oklch(38% 0.024 80)",
+          "oklch(49% 0.028 80)",
+          "oklch(61% 0.028 80)",
+          "oklch(72% 0.024 80)",
+          "oklch(84% 0.014 80)",
+          "oklch(95% 0.004 80)"
+        ]
+      },
+      "sel": {
+        "role": "neutral",
+        "displayName": "Seleção",
+        "canonical": "#1f2a3a",
+        "cssVar": "--sel",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.005 258)",
+          "oklch(26% 0.017 258)",
+          "oklch(38% 0.029 258)",
+          "oklch(49% 0.033 258)",
+          "oklch(61% 0.033 258)",
+          "oklch(72% 0.029 258)",
+          "oklch(84% 0.017 258)",
+          "oklch(95% 0.005 258)"
+        ]
+      },
+      "hover": {
+        "role": "neutral",
+        "displayName": "Hover",
+        "canonical": "rgb(127 127 127 / 0.1)",
+        "cssVar": "--hover",
+        "theme": "dark"
+      },
+      "t-kw": {
+        "role": "secondary",
+        "displayName": "Sintaxe: palavra-chave",
+        "canonical": "#c792ea",
+        "cssVar": "--t-kw",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.021 311)",
+          "oklch(26% 0.069 311)",
+          "oklch(38% 0.117 311)",
+          "oklch(49% 0.135 311)",
+          "oklch(61% 0.135 311)",
+          "oklch(72% 0.117 311)",
+          "oklch(84% 0.069 311)",
+          "oklch(95% 0.021 311)"
+        ]
+      },
+      "t-str": {
+        "role": "secondary",
+        "displayName": "Sintaxe: string",
+        "canonical": "#a5d86f",
+        "cssVar": "--t-str",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.023 130)",
+          "oklch(26% 0.074 130)",
+          "oklch(38% 0.126 130)",
+          "oklch(49% 0.145 130)",
+          "oklch(61% 0.145 130)",
+          "oklch(72% 0.126 130)",
+          "oklch(84% 0.074 130)",
+          "oklch(95% 0.023 130)"
+        ]
+      },
+      "t-num": {
+        "role": "secondary",
+        "displayName": "Sintaxe: número/constante",
+        "canonical": "#f78c6c",
+        "cssVar": "--t-num",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.021 37)",
+          "oklch(26% 0.071 37)",
+          "oklch(38% 0.120 37)",
+          "oklch(49% 0.138 37)",
+          "oklch(61% 0.138 37)",
+          "oklch(72% 0.120 37)",
+          "oklch(84% 0.071 37)",
+          "oklch(95% 0.021 37)"
+        ]
+      },
+      "t-com": {
+        "role": "secondary",
+        "displayName": "Sintaxe: comentário",
+        "canonical": "#808893",
+        "cssVar": "--t-com",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.003 256)",
+          "oklch(26% 0.010 256)",
+          "oklch(38% 0.017 256)",
+          "oklch(49% 0.019 256)",
+          "oklch(61% 0.019 256)",
+          "oklch(72% 0.017 256)",
+          "oklch(84% 0.010 256)",
+          "oklch(95% 0.003 256)"
+        ]
+      },
+      "t-key": {
+        "role": "secondary",
+        "displayName": "Sintaxe: chave/função",
+        "canonical": "#82aaff",
+        "cssVar": "--t-key",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.020 264)",
+          "oklch(26% 0.067 264)",
+          "oklch(38% 0.114 264)",
+          "oklch(49% 0.131 264)",
+          "oklch(61% 0.131 264)",
+          "oklch(72% 0.114 264)",
+          "oklch(84% 0.067 264)",
+          "oklch(95% 0.020 264)"
+        ]
+      },
+      "t-type": {
+        "role": "secondary",
+        "displayName": "Sintaxe: tipo/parâmetro",
+        "canonical": "#ffcb6b",
+        "cssVar": "--t-type",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.020 81)",
+          "oklch(26% 0.065 81)",
+          "oklch(38% 0.111 81)",
+          "oklch(49% 0.128 81)",
+          "oklch(61% 0.128 81)",
+          "oklch(72% 0.111 81)",
+          "oklch(84% 0.065 81)",
+          "oklch(95% 0.020 81)"
+        ]
+      },
+      "t-punct": {
+        "role": "secondary",
+        "displayName": "Sintaxe: pontuação",
+        "canonical": "#a9b1bc",
+        "cssVar": "--t-punct",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.003 256)",
+          "oklch(26% 0.009 256)",
+          "oklch(38% 0.016 256)",
+          "oklch(49% 0.018 256)",
+          "oklch(61% 0.018 256)",
+          "oklch(72% 0.016 256)",
+          "oklch(84% 0.009 256)",
+          "oklch(95% 0.003 256)"
+        ]
+      },
+      "i-md": {
+        "role": "secondary",
+        "displayName": "Ícone .md",
+        "canonical": "#5fb3f0",
+        "cssVar": "--i-md",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.019 242)",
+          "oklch(26% 0.062 242)",
+          "oklch(38% 0.105 242)",
+          "oklch(49% 0.121 242)",
+          "oklch(61% 0.121 242)",
+          "oklch(72% 0.105 242)",
+          "oklch(84% 0.062 242)",
+          "oklch(95% 0.019 242)"
+        ]
+      },
+      "i-tsx": {
+        "role": "secondary",
+        "displayName": "Ícone .tsx",
+        "canonical": "#4fc1ff",
+        "cssVar": "--i-tsx",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.021 236)",
+          "oklch(26% 0.069 236)",
+          "oklch(38% 0.117 236)",
+          "oklch(49% 0.135 236)",
+          "oklch(61% 0.135 236)",
+          "oklch(72% 0.117 236)",
+          "oklch(84% 0.069 236)",
+          "oklch(95% 0.021 236)"
+        ]
+      },
+      "i-ts": {
+        "role": "secondary",
+        "displayName": "Ícone .ts",
+        "canonical": "#5b9bf0",
+        "cssVar": "--i-ts",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.022 256)",
+          "oklch(26% 0.073 256)",
+          "oklch(38% 0.124 256)",
+          "oklch(49% 0.143 256)",
+          "oklch(61% 0.143 256)",
+          "oklch(72% 0.124 256)",
+          "oklch(84% 0.073 256)",
+          "oklch(95% 0.022 256)"
+        ]
+      },
+      "i-json": {
+        "role": "secondary",
+        "displayName": "Ícone .json",
+        "canonical": "#e5c07b",
+        "cssVar": "--i-json",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.015 82)",
+          "oklch(26% 0.050 82)",
+          "oklch(38% 0.084 82)",
+          "oklch(49% 0.097 82)",
+          "oklch(61% 0.097 82)",
+          "oklch(72% 0.084 82)",
+          "oklch(84% 0.050 82)",
+          "oklch(95% 0.015 82)"
+        ]
+      },
+      "dot-r": {
+        "role": "tertiary",
+        "displayName": "Bolinha vermelha",
+        "canonical": "#ff5f57",
+        "cssVar": "--dot-r",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.031 26)",
+          "oklch(26% 0.100 26)",
+          "oklch(38% 0.170 26)",
+          "oklch(49% 0.196 26)",
+          "oklch(61% 0.196 26)",
+          "oklch(72% 0.170 26)",
+          "oklch(84% 0.100 26)",
+          "oklch(95% 0.031 26)"
+        ]
+      },
+      "dot-y": {
+        "role": "tertiary",
+        "displayName": "Bolinha amarela",
+        "canonical": "#febc2e",
+        "cssVar": "--dot-y",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.025 81)",
+          "oklch(26% 0.082 81)",
+          "oklch(38% 0.140 81)",
+          "oklch(49% 0.161 81)",
+          "oklch(61% 0.161 81)",
+          "oklch(72% 0.140 81)",
+          "oklch(84% 0.082 81)",
+          "oklch(95% 0.025 81)"
+        ]
+      },
+      "dot-g": {
+        "role": "tertiary",
+        "displayName": "Bolinha verde",
+        "canonical": "#28c840",
+        "cssVar": "--dot-g",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15% 0.034 145)",
+          "oklch(26% 0.111 145)",
+          "oklch(38% 0.188 145)",
+          "oklch(49% 0.217 145)",
+          "oklch(61% 0.217 145)",
+          "oklch(72% 0.188 145)",
+          "oklch(84% 0.111 145)",
+          "oklch(95% 0.034 145)"
+        ]
+      },
+      "bg-light": {
+        "role": "neutral",
+        "displayName": "Fundo do Editor (claro)",
+        "canonical": "#fbfbfa",
+        "cssVar": "--bg",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.001 106)",
+          "oklch(26% 0.001 106)",
+          "oklch(38% 0.001 106)",
+          "oklch(49% 0.001 106)",
+          "oklch(61% 0.001 106)",
+          "oklch(72% 0.001 106)",
+          "oklch(84% 0.001 106)",
+          "oklch(95% 0.001 106)"
+        ]
+      },
+      "side-light": {
+        "role": "neutral",
+        "displayName": "Lateral (claro)",
+        "canonical": "#f2f2ef",
+        "cssVar": "--side",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.004 106)",
+          "oklch(26% 0.004 106)",
+          "oklch(38% 0.004 106)",
+          "oklch(49% 0.004 106)",
+          "oklch(61% 0.004 106)",
+          "oklch(72% 0.004 106)",
+          "oklch(84% 0.004 106)",
+          "oklch(95% 0.004 106)"
+        ]
+      },
+      "bar-light": {
+        "role": "neutral",
+        "displayName": "Barra (claro)",
+        "canonical": "#e8e8e4",
+        "cssVar": "--bar",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.005 107)",
+          "oklch(26% 0.005 107)",
+          "oklch(38% 0.005 107)",
+          "oklch(49% 0.005 107)",
+          "oklch(61% 0.005 107)",
+          "oklch(72% 0.005 107)",
+          "oklch(84% 0.005 107)",
+          "oklch(95% 0.005 107)"
+        ]
+      },
+      "line-light": {
+        "role": "neutral",
+        "displayName": "Linha (claro)",
+        "canonical": "#dcdcd6",
+        "cssVar": "--line",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.008 107)",
+          "oklch(26% 0.008 107)",
+          "oklch(38% 0.008 107)",
+          "oklch(49% 0.008 107)",
+          "oklch(61% 0.008 107)",
+          "oklch(72% 0.008 107)",
+          "oklch(84% 0.008 107)",
+          "oklch(95% 0.008 107)"
+        ]
+      },
+      "fg-light": {
+        "role": "neutral",
+        "displayName": "Texto (claro)",
+        "canonical": "#24262b",
+        "cssVar": "--fg",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.010 268)",
+          "oklch(26% 0.010 268)",
+          "oklch(38% 0.010 268)",
+          "oklch(49% 0.010 268)",
+          "oklch(61% 0.010 268)",
+          "oklch(72% 0.010 268)",
+          "oklch(84% 0.010 268)",
+          "oklch(95% 0.010 268)"
+        ]
+      },
+      "muted-light": {
+        "role": "neutral",
+        "displayName": "Texto Apagado (claro)",
+        "canonical": "#5f636b",
+        "cssVar": "--muted",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.002 264)",
+          "oklch(26% 0.007 264)",
+          "oklch(38% 0.012 264)",
+          "oklch(49% 0.014 264)",
+          "oklch(61% 0.014 264)",
+          "oklch(72% 0.012 264)",
+          "oklch(84% 0.007 264)",
+          "oklch(95% 0.002 264)"
+        ]
+      },
+      "accent-light": {
+        "role": "primary",
+        "displayName": "Âmbar Cursor (claro)",
+        "canonical": "#9a5c0e",
+        "cssVar": "--accent",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.018 64)",
+          "oklch(26% 0.059 64)",
+          "oklch(38% 0.100 64)",
+          "oklch(49% 0.115 64)",
+          "oklch(61% 0.115 64)",
+          "oklch(72% 0.100 64)",
+          "oklch(84% 0.059 64)",
+          "oklch(95% 0.018 64)"
+        ]
+      },
+      "on-accent-light": {
+        "role": "primary",
+        "displayName": "Texto sobre Âmbar (claro)",
+        "canonical": "#ffffff",
+        "cssVar": "--on-accent",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "sel-light": {
+        "role": "neutral",
+        "displayName": "Seleção (claro)",
+        "canonical": "#e3ebf6",
+        "cssVar": "--sel",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.003 256)",
+          "oklch(26% 0.009 256)",
+          "oklch(38% 0.015 256)",
+          "oklch(49% 0.017 256)",
+          "oklch(61% 0.017 256)",
+          "oklch(72% 0.015 256)",
+          "oklch(84% 0.009 256)",
+          "oklch(95% 0.003 256)"
+        ]
+      },
+      "hover-light": {
+        "role": "neutral",
+        "displayName": "Hover (claro)",
+        "canonical": "rgb(127 127 127 / 0.12)",
+        "cssVar": "--hover",
+        "theme": "light"
+      },
+      "t-kw-light": {
+        "role": "secondary",
+        "displayName": "Sintaxe: palavra-chave (claro)",
+        "canonical": "#8a3fc7",
+        "cssVar": "--t-kw",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.032 306)",
+          "oklch(26% 0.104 306)",
+          "oklch(38% 0.176 306)",
+          "oklch(49% 0.203 306)",
+          "oklch(61% 0.203 306)",
+          "oklch(72% 0.176 306)",
+          "oklch(84% 0.104 306)",
+          "oklch(95% 0.032 306)"
+        ]
+      },
+      "t-str-light": {
+        "role": "secondary",
+        "displayName": "Sintaxe: string (claro)",
+        "canonical": "#3c7f1f",
+        "cssVar": "--t-str",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.023 138)",
+          "oklch(26% 0.074 138)",
+          "oklch(38% 0.126 138)",
+          "oklch(49% 0.145 138)",
+          "oklch(61% 0.145 138)",
+          "oklch(72% 0.126 138)",
+          "oklch(84% 0.074 138)",
+          "oklch(95% 0.023 138)"
+        ]
+      },
+      "t-num-light": {
+        "role": "secondary",
+        "displayName": "Sintaxe: número/constante (claro)",
+        "canonical": "#b0480f",
+        "cssVar": "--t-num",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.023 44)",
+          "oklch(26% 0.076 44)",
+          "oklch(38% 0.129 44)",
+          "oklch(49% 0.149 44)",
+          "oklch(61% 0.149 44)",
+          "oklch(72% 0.129 44)",
+          "oklch(84% 0.076 44)",
+          "oklch(95% 0.023 44)"
+        ]
+      },
+      "t-com-light": {
+        "role": "secondary",
+        "displayName": "Sintaxe: comentário (claro)",
+        "canonical": "#6b717a",
+        "cssVar": "--t-com",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.002 258)",
+          "oklch(26% 0.008 258)",
+          "oklch(38% 0.014 258)",
+          "oklch(49% 0.016 258)",
+          "oklch(61% 0.016 258)",
+          "oklch(72% 0.014 258)",
+          "oklch(84% 0.008 258)",
+          "oklch(95% 0.002 258)"
+        ]
+      },
+      "t-key-light": {
+        "role": "secondary",
+        "displayName": "Sintaxe: chave/função (claro)",
+        "canonical": "#2f5fc4",
+        "cssVar": "--t-key",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.026 263)",
+          "oklch(26% 0.085 263)",
+          "oklch(38% 0.144 263)",
+          "oklch(49% 0.167 263)",
+          "oklch(61% 0.167 263)",
+          "oklch(72% 0.144 263)",
+          "oklch(84% 0.085 263)",
+          "oklch(95% 0.026 263)"
+        ]
+      },
+      "t-type-light": {
+        "role": "secondary",
+        "displayName": "Sintaxe: tipo/parâmetro (claro)",
+        "canonical": "#8a5f00",
+        "cssVar": "--t-type",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.017 78)",
+          "oklch(26% 0.055 78)",
+          "oklch(38% 0.094 78)",
+          "oklch(49% 0.108 78)",
+          "oklch(61% 0.108 78)",
+          "oklch(72% 0.094 78)",
+          "oklch(84% 0.055 78)",
+          "oklch(95% 0.017 78)"
+        ]
+      },
+      "t-punct-light": {
+        "role": "secondary",
+        "displayName": "Sintaxe: pontuação (claro)",
+        "canonical": "#4a4e56",
+        "cssVar": "--t-punct",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.002 264)",
+          "oklch(26% 0.007 264)",
+          "oklch(38% 0.012 264)",
+          "oklch(49% 0.014 264)",
+          "oklch(61% 0.014 264)",
+          "oklch(72% 0.012 264)",
+          "oklch(84% 0.007 264)",
+          "oklch(95% 0.002 264)"
+        ]
+      },
+      "i-md-light": {
+        "role": "secondary",
+        "displayName": "Ícone .md (claro)",
+        "canonical": "#1f6fb2",
+        "cssVar": "--i-md",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.020 249)",
+          "oklch(26% 0.066 249)",
+          "oklch(38% 0.112 249)",
+          "oklch(49% 0.129 249)",
+          "oklch(61% 0.129 249)",
+          "oklch(72% 0.112 249)",
+          "oklch(84% 0.066 249)",
+          "oklch(95% 0.020 249)"
+        ]
+      },
+      "i-tsx-light": {
+        "role": "secondary",
+        "displayName": "Ícone .tsx (claro)",
+        "canonical": "#0f7fae",
+        "cssVar": "--i-tsx",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.018 234)",
+          "oklch(26% 0.059 234)",
+          "oklch(38% 0.099 234)",
+          "oklch(49% 0.115 234)",
+          "oklch(61% 0.115 234)",
+          "oklch(72% 0.099 234)",
+          "oklch(84% 0.059 234)",
+          "oklch(95% 0.018 234)"
+        ]
+      },
+      "i-ts-light": {
+        "role": "secondary",
+        "displayName": "Ícone .ts (claro)",
+        "canonical": "#2f5fc4",
+        "cssVar": "--i-ts",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.026 263)",
+          "oklch(26% 0.085 263)",
+          "oklch(38% 0.144 263)",
+          "oklch(49% 0.167 263)",
+          "oklch(61% 0.167 263)",
+          "oklch(72% 0.144 263)",
+          "oklch(84% 0.085 263)",
+          "oklch(95% 0.026 263)"
+        ]
+      },
+      "i-json-light": {
+        "role": "secondary",
+        "displayName": "Ícone .json (claro)",
+        "canonical": "#8a5f00",
+        "cssVar": "--i-json",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15% 0.017 78)",
+          "oklch(26% 0.055 78)",
+          "oklch(38% 0.094 78)",
+          "oklch(49% 0.108 78)",
+          "oklch(61% 0.108 78)",
+          "oklch(72% 0.094 78)",
+          "oklch(84% 0.055 78)",
+          "oklch(95% 0.017 78)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (nome como código)",
+        "purpose": "Título do README e marca d'água do estado vazio."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "## da pré-visualização Markdown, com linha inferior."
+      },
+      "body": {
+        "displayName": "Prosa",
+        "purpose": "Texto da pré-visualização, máximo 72ch."
+      },
+      "title": {
+        "displayName": "Item de interface",
+        "purpose": "Explorador (13,5px), abas (13px), opções da paleta (14px)."
+      },
+      "code": {
+        "displayName": "Código",
+        "purpose": "Editor de código (13px, 13,5px em md) e terminal (13px, lh 1.6)."
+      },
+      "label": {
+        "displayName": "Cabeçalho de painel",
+        "purpose": "Só cabeçalhos de painel do editor; nunca sobretítulo de conteúdo."
+      },
+      "status": {
+        "displayName": "Status",
+        "purpose": "Barra de status, cabeçalho de caminho, gatilho de busca."
+      }
+    },
+    "shadows": [
+      {
+        "name": "floating",
+        "value": "0 20px 60px -10px rgb(0 0 0 / .55)",
+        "purpose": "Paleta de comandos."
+      },
+      {
+        "name": "drawer",
+        "value": "12px 0 32px rgb(0 0 0 / .35)",
+        "purpose": "Explorador em gaveta no celular."
+      },
+      {
+        "name": "portrait",
+        "value": "0 8px 24px -12px rgb(0 0 0 / .45)",
+        "purpose": "Foto do README."
+      },
+      {
+        "name": "tab-indicator",
+        "value": "inset 0 2px 0 var(--accent)",
+        "purpose": "Linha âmbar da aba ativa (traço, não elevação)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "Curva única (EASE em src/constants/motion.ts)."
+      },
+      {
+        "name": "theme",
+        "value": "0.25s",
+        "purpose": "Troca de tema: background-color e color do body."
+      },
+      {
+        "name": "tab",
+        "value": "0.18s",
+        "purpose": "Abas entram e saem pela largura; fade de troca de arquivo."
+      },
+      {
+        "name": "palette",
+        "value": "0.12s overlay / 0.16s dialog",
+        "purpose": "Paleta abre com y -8px e scale 0.98."
+      },
+      {
+        "name": "terminal",
+        "value": "0.25s ease",
+        "purpose": "Terminal sobe pela altura."
+      },
+      {
+        "name": "drawer",
+        "value": "0.3s ease",
+        "purpose": "Gaveta do explorador entra de -105%."
+      },
+      {
+        "name": "boot-cascade",
+        "value": "explorador x -8px, 0.3s, 0.25s + i*0.03s; README y 12px, 0.5s ease, 0.3s + i*0.06s",
+        "purpose": "Só na primeira abertura, só deslocamento; desligado com prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      }
+    ],
+    "openDecisions": [
+      {
+        "name": "seed",
+        "value": "none",
+        "note": "Rodada de conceitos não executada porque o dono fixou a composição. Nenhuma seed adotada; o artefato em .impeccable/questions/ não foi aprovado. Decisão do dono."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Barra de status",
+      "kind": "custom",
+      "refersTo": "status-bar",
+      "description": "Faixa âmbar de 24px no rodapé; única superfície preenchida de âmbar.",
+      "html": "<footer class=\"ds-status\"><span>main</span><span>0 problemas</span><span class=\"ds-status-r\">Markdown</span><button class=\"ds-status-btn\">Terminal</button></footer>",
+      "css": ".ds-status{display:flex;align-items:center;gap:16px;height:24px;padding:0 12px;background:var(--accent,#e5a54b);color:var(--on-accent,#1a1205);font:12px 'IBM Plex Sans',system-ui,sans-serif;white-space:nowrap}.ds-status-r{margin-left:auto}.ds-status-btn{all:unset;cursor:pointer;padding:0 4px;border-radius:4px}.ds-status-btn:hover{background:rgb(0 0 0/.1)}.ds-status-btn:focus-visible{outline:1px solid var(--on-accent,#1a1205);outline-offset:-1px}"
+    },
+    {
+      "name": "Abas",
+      "kind": "nav",
+      "refersTo": "tab-active",
+      "description": "Faixa de abas: ativa em bg com linha âmbar de 2px no topo, inativa em bar/muted.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><div class=\"ds-tab ds-tab-on\" role=\"tab\" tabindex=\"0\">README.md <button class=\"ds-tab-x\" aria-label=\"Fechar\">×</button></div><div class=\"ds-tab\" role=\"tab\" tabindex=\"0\">sobre.md <button class=\"ds-tab-x\" aria-label=\"Fechar\">×</button></div></div>",
+      "css": ".ds-tabs{display:flex;height:36px;background:var(--bar,#0b0d10);border-bottom:1px solid var(--line,#23272f)}.ds-tab{display:flex;align-items:center;gap:8px;padding:0 6px 0 14px;border-right:1px solid var(--line,#23272f);font:13px 'IBM Plex Sans',system-ui,sans-serif;color:var(--muted,#7d8590);background:var(--bar,#0b0d10);cursor:pointer}.ds-tab:hover{color:var(--fg,#d7dae0)}.ds-tab:focus-visible{outline:1px solid var(--accent,#e5a54b);outline-offset:-1px}.ds-tab-on{background:var(--bg,#0f1115);color:var(--fg,#d7dae0);box-shadow:inset 0 2px 0 var(--accent,#e5a54b)}.ds-tab-x{all:unset;display:grid;place-items:center;width:20px;height:20px;border-radius:4px;color:var(--muted,#7d8590);cursor:pointer}.ds-tab:not(.ds-tab-on) .ds-tab-x{opacity:.6}.ds-tab-x:hover{background:var(--hover,rgb(127 127 127/.1));color:var(--fg,#d7dae0)}"
+    },
+    {
+      "name": "Item do explorador",
+      "kind": "nav",
+      "refersTo": "explorer-item",
+      "description": "Linha de arquivo com ícone por tipo; ativo em sel.",
+      "html": "<ul class=\"ds-tree\"><li><button class=\"ds-tree-i ds-tree-on\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--i-md,#5fb3f0)\" stroke-width=\"1.75\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"/><path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/></svg>README.md</button></li><li><button class=\"ds-tree-i\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--i-json,#e5c07b)\" stroke-width=\"1.75\"><path d=\"M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1\"/><path d=\"M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1\"/></svg>experiencia.json</button></li></ul>",
+      "css": ".ds-tree{list-style:none;margin:0;padding:0;width:240px;background:var(--side,#14171c)}.ds-tree-i{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:6px;width:100%;padding:3px 12px 3px 14px;font:13.5px 'IBM Plex Sans',system-ui,sans-serif;color:var(--fg,#d7dae0);cursor:pointer;white-space:nowrap}.ds-tree-i:hover,.ds-tree-i:focus-visible{background:var(--hover,rgb(127 127 127/.1))}.ds-tree-i:focus-visible{outline:1px solid var(--accent,#e5a54b);outline-offset:-1px}.ds-tree-on,.ds-tree-on:hover{background:var(--sel,#1f2a3a)}"
+    },
+    {
+      "name": "Botão da barra de atividade",
+      "kind": "button",
+      "refersTo": "activity-button",
+      "description": "Botão de 40px com ícone de 20px; pressionado ganha traço âmbar à esquerda.",
+      "html": "<nav class=\"ds-act\"><button class=\"ds-act-b\" aria-pressed=\"true\" aria-label=\"Explorador\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M20 7h-3a2 2 0 0 1-2-2V2\"/><path d=\"M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z\"/><path d=\"M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8\"/></svg></button><button class=\"ds-act-b\" aria-label=\"Buscar\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg></button></nav>",
+      "css": ".ds-act{display:flex;flex-direction:column;align-items:center;gap:4px;width:48px;padding:8px 0;background:var(--bar,#0b0d10);border-right:1px solid var(--line,#23272f)}.ds-act-b{all:unset;position:relative;display:grid;place-items:center;width:40px;height:40px;border-radius:6px;color:var(--muted,#7d8590);cursor:pointer;transition:color .15s}.ds-act-b:hover,.ds-act-b[aria-pressed=true]{color:var(--fg,#d7dae0)}.ds-act-b::before{content:'';position:absolute;top:6px;bottom:6px;left:-4px;width:2px;border-radius:99px;background:var(--accent,#e5a54b);opacity:0;transition:opacity .15s}.ds-act-b[aria-pressed=true]::before{opacity:1}.ds-act-b:focus-visible{outline:1px solid var(--accent,#e5a54b);outline-offset:-1px}"
+    },
+    {
+      "name": "Gatilho de busca",
+      "kind": "input",
+      "refersTo": "search-trigger",
+      "description": "Botão da barra de título que abre a paleta, com atalho em kbd.",
+      "html": "<button class=\"ds-search\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><span>Buscar arquivo ou comando</span><kbd class=\"ds-kbd\">⌘ K</kbd></button>",
+      "css": ".ds-search{all:unset;display:inline-flex;align-items:center;gap:8px;padding:3px 10px;border:1px solid var(--line,#23272f);border-radius:6px;background:var(--side,#14171c);color:var(--muted,#7d8590);font:12px 'IBM Plex Sans',system-ui,sans-serif;cursor:pointer;transition:border-color .15s,color .15s}.ds-search:hover{border-color:var(--muted,#7d8590);color:var(--fg,#d7dae0)}.ds-search:focus-visible{outline:1px solid var(--accent,#e5a54b);outline-offset:-1px}.ds-kbd{border:1px solid var(--line,#23272f);border-radius:3px;padding:0 4px;font:11px/16px 'JetBrains Mono',ui-monospace,monospace;color:var(--muted,#7d8590)}"
+    },
+    {
+      "name": "Paleta de comandos",
+      "kind": "card",
+      "refersTo": "palette",
+      "description": "Camada flutuante com campo, lista de opções e letras encontradas em âmbar.",
+      "html": "<div class=\"ds-pal\" role=\"dialog\"><input class=\"ds-pal-in\" placeholder=\"Nome de um arquivo, ou > para comandos\" value=\"rea\"><ul class=\"ds-pal-l\"><li class=\"ds-pal-o ds-pal-on\"><span><mark>Rea</mark>dme.md</span><small>arquivo</small></li><li class=\"ds-pal-o\"><span>Tema: claro</span><small>comando</small></li></ul></div>",
+      "css": ".ds-pal{width:min(620px,100%);overflow:hidden;border:1px solid var(--line,#23272f);border-radius:10px;background:var(--side,#14171c);color:var(--fg,#d7dae0);box-shadow:0 20px 60px -10px rgb(0 0 0/.55);font-family:'IBM Plex Sans',system-ui,sans-serif}.ds-pal-in{box-sizing:border-box;width:100%;border:0;border-bottom:1px solid var(--line,#23272f);background:transparent;padding:14px 16px;font-size:15px;color:var(--fg,#d7dae0);outline:none}.ds-pal-in::placeholder{color:var(--muted,#7d8590)}.ds-pal-l{list-style:none;margin:0;padding:6px}.ds-pal-o{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;font-size:14px;cursor:pointer}.ds-pal-o:hover,.ds-pal-on{background:var(--sel,#1f2a3a)}.ds-pal-o mark{background:transparent;color:var(--accent,#e5a54b);font-weight:600}.ds-pal-o small{margin-left:auto;font-size:12px;color:var(--muted,#7d8590)}"
+    },
+    {
+      "name": "Link da pré-visualização",
+      "kind": "button",
+      "refersTo": "link",
+      "description": "Ações do README: âmbar 500 com sublinhado a 40%; não há botão preenchido.",
+      "html": "<p class=\"ds-prose\"><a class=\"ds-link\" href=\"#\">Ver trabalhos</a> · <a class=\"ds-link\" href=\"#\">Baixar CV</a> · <a class=\"ds-link\" href=\"#\">Falar comigo</a></p>",
+      "css": ".ds-prose{font:15px/1.7 'IBM Plex Sans',system-ui,sans-serif;color:var(--fg,#d7dae0);max-width:72ch}.ds-link{font-weight:500;color:var(--accent,#e5a54b);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent,#e5a54b) 40%,transparent);text-underline-offset:3px}.ds-link:hover{text-decoration-color:var(--accent,#e5a54b)}.ds-link:focus-visible{outline:1px solid var(--accent,#e5a54b);outline-offset:-1px}"
+    },
+    {
+      "name": "Terminal",
+      "kind": "custom",
+      "description": "Painel com cabeçalho de painel, saída mono por tons e prompt âmbar.",
+      "html": "<section class=\"ds-term\"><div class=\"ds-term-h\"><span>Terminal</span></div><div class=\"ds-term-o\"><div><span class=\"ds-acc\">$</span> whoami</div><div class=\"ds-ok\">José Paiva</div><div class=\"ds-err\">comando não encontrado</div></div><label class=\"ds-term-p\"><span class=\"ds-acc\">jose@dev ~ $</span><input aria-label=\"Comando\"></label></section>",
+      "css": ".ds-term{background:var(--bar,#0b0d10);border-top:1px solid var(--line,#23272f);color:var(--fg,#d7dae0)}.ds-term-h{padding:6px 12px;border-bottom:1px solid var(--line,#23272f);font:11px 'IBM Plex Sans',system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted,#7d8590)}.ds-term-h span{color:var(--fg,#d7dae0);border-bottom:1px solid var(--accent,#e5a54b);padding-bottom:1px}.ds-term-o{padding:8px 14px;font:13px/1.6 'JetBrains Mono',ui-monospace,monospace}.ds-acc{color:var(--accent,#e5a54b)}.ds-ok{color:var(--t-str,#a5d86f)}.ds-err{color:var(--t-num,#f78c6c)}.ds-term-p{display:flex;gap:8px;padding:6px 14px;border-top:1px solid var(--line,#23272f);font:13px 'JetBrains Mono',ui-monospace,monospace}.ds-term-p input{flex:1;min-width:0;border:0;background:transparent;color:var(--fg,#d7dae0);font:inherit;outline:none;caret-color:var(--accent,#e5a54b)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Editor de Todo Dia",
+    "overview": "**Creative North Star: \"O Editor de Todo Dia\"**\n\nO sistema é o próprio editor de código que o público usa no trabalho: barra de título, barra de atividade, explorador, abas, editor, terminal, barra de status e paleta de comandos. Nada é ilustração de um editor; cada peça de cromo é um controle que funciona. A densidade é a de uma ferramenta: texto pequeno na interface (12 a 13,5px), painéis colados por linhas de 1px, nenhuma margem decorativa. O único momento de respiro é a pré-visualização do README, com prosa a 15px, entrelinha 1,7 e medida de 72ch.\n\nA paleta é um escuro frio quase neutro com um único âmbar que marca onde você está: a barra de status, a aba ativa, o indicador da barra de atividade, links, o prompt do terminal e o foco. As outras cores existem só como cores de sintaxe e de tipo de arquivo, no papel que já têm num editor. O tema claro é um espelho exato, token por token, trocado por `[data-theme]`.\n\nO mundo foi fixado pelo dono e herdado da superfície incumbente (`~/Downloads/jose-dev.html`); não houve rodada de conceitos.\n\n**Decisão em aberto: seed.** O contrato de direção registra `Seed: none`: a rodada de conceitos não foi executada porque o dono fixou a composição. Nenhuma seed foi adotada e este documento não atribui uma. Existe um artefato de rodada em `.impeccable/questions/` que não foi aprovado e não governa este sistema. Fechar esta decisão cabe ao dono.",
+    "keyCharacteristics": [
+      "Cromo de editor completo e funcional; nada clicável é falso.",
+      "Um acento âmbar, raro e posicional.",
+      "Profundidade por degraus tonais e linhas de 1px, não por sombras.",
+      "Duas famílias: IBM Plex Sans para interface e prosa, JetBrains Mono para código e para o nome.",
+      "Dois temas com paridade total de tokens."
+    ],
+    "rules": [
+      {
+        "name": "The Amber Is the Cursor Rule",
+        "body": "O âmbar marca posição e ação: onde você está, o que é clicável, o que tem foco. A única superfície preenchida de âmbar é a barra de status. Nunca use âmbar como fundo de cartão, seção ou botão de conteúdo.",
+        "section": "colors"
+      },
+      {
+        "name": "The Syntax Is the Palette Rule",
+        "body": "Nenhum matiz novo. Uma cor secundária só entra se for um token `t-*` ou `i-*` usado no sentido que ele já tem.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Theme Parity Rule",
+        "body": "Todo componente referencia variáveis (`var(--bg)`, `text-muted`), nunca hex. Um token novo nasce nos dois blocos de tema ao mesmo tempo.",
+        "section": "colors"
+      },
+      {
+        "name": "The Name as Code Rule",
+        "body": "Mono é reservada a código, terminal, kbd, código inline, o título do README e a marca d'água do estado vazio. Interface e prosa ficam em Plex Sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Panel Header Rule",
+        "body": "Maiúsculas espaçadas a 11px existem só como cabeçalho de painel do editor, como no VS Code. Nunca como sobretítulo acima de um título de conteúdo.",
+        "section": "typography"
+      },
+      {
+        "name": "The Chrome Is Fixed Rule",
+        "body": "A janela nunca rola como página. Conteúdo novo entra como arquivo, aba ou painel dentro da grade.",
+        "section": "layout"
+      },
+      {
+        "name": "The Tonal Stack Rule",
+        "body": "Painéis do cromo nunca levam sombra. Uma sombra só aparece em camada que flutua sobre o editor, e sempre difusa.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Chrome Rule",
+        "body": "Painel não tem canto arredondado. Raio é para controle e camada flutuante.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** marcar posição e foco com o âmbar (`accent`) e deixar o resto em `fg`, `muted` e degraus tonais.",
+      "**Do** separar painéis com borda de 1px `line` e fundos `bar`, `bg` e `side`.",
+      "**Do** definir todo token novo nos dois temas e referenciar só variáveis nos componentes.",
+      "**Do** usar ícones SVG Lucide de 14 a 20px com traço 1.6 a 1.75, coloridos por `i-*` em arquivos e `muted` no resto.",
+      "**Do** fazer cada peça de cromo funcionar: botões da janela, contadores, atalhos e barra de status têm efeito real.",
+      "**Do** manter conteúdo novo dentro do modelo de arquivos (explorador, aba, pré-visualização ou código)."
+    ],
+    "donts": [
+      "**Don't** colocar sobretítulo em maiúsculas acima de títulos de conteúdo; maiúsculas espaçadas são só cabeçalho de painel.",
+      "**Don't** usar sombra em painel do cromo nem sombra dura deslocada; sombra só difusa e em camada flutuante.",
+      "**Don't** introduzir matiz fora dos tokens de sintaxe, tipo de arquivo e bolinhas da janela.",
+      "**Don't** criar botão preenchido de âmbar no conteúdo; a única superfície âmbar é a barra de status.",
+      "**Don't** usar outra face de display além de JetBrains Mono, nem a fonte do sistema como display.",
+      "**Don't** desenhar cromo decorativo que não faz nada."
+    ]
+  }
+}
