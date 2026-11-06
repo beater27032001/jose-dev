@@ -1,6 +1,15 @@
 'use client'
 
-import { Maximize2, Minus, Search, X, type LucideIcon } from 'lucide-react'
+import { useSyncExternalStore } from 'react'
+
+import {
+  Maximize2,
+  Minus,
+  Search,
+  SquareTerminal,
+  X,
+  type LucideIcon,
+} from 'lucide-react'
 
 import { Kbd } from '@atoms/Kbd'
 import { baseName } from '@domain/files'
@@ -18,21 +27,30 @@ function WindowButton({
   onClick: () => void
 }) {
   return (
+    // área de toque de 24px; a bolinha visível continua com 13px
     <button
       aria-label={label}
       title={label}
       onClick={onClick}
-      className="grid size-[13px] place-items-center rounded-full text-black/65"
-      style={{ background: color }}
+      className="grid size-6 place-items-center rounded-full"
     >
-      <Icon
-        aria-hidden
-        strokeWidth={3}
-        className="size-2 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100"
-      />
+      <span
+        className="grid size-[13px] place-items-center rounded-full text-black/65"
+        style={{ background: color }}
+      >
+        <Icon
+          aria-hidden
+          strokeWidth={3}
+          className="size-2 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100"
+        />
+      </span>
     </button>
   )
 }
+
+// O Safari do iPhone não tem tela cheia para páginas; lá o botão verde abre o terminal.
+const noop = () => () => {}
+const canFullscreen = () => document.fullscreenEnabled === true
 
 const fullscreen = () =>
   document.fullscreenElement
@@ -40,12 +58,20 @@ const fullscreen = () =>
     : document.documentElement.requestFullscreen?.()
 
 export function TitleBar() {
-  const { editor, openPalette, isMac, dispatch, toggleExplorer } =
-    useWorkbench()
+  const {
+    editor,
+    openPalette,
+    isMac,
+    dispatch,
+    toggleExplorer,
+    terminal,
+    setTerminal,
+  } = useWorkbench()
+  const fullscreenOk = useSyncExternalStore(noop, canFullscreen, () => true)
   return (
     <header className="flex h-9 items-center gap-3 border-b border-line bg-bar pr-[max(12px,env(safe-area-inset-right))] pl-[max(12px,env(safe-area-inset-left))] text-[12.5px] text-muted">
       {/* os botões da janela fazem algo de verdade */}
-      <div className="group flex flex-none gap-[7px]">
+      <div className="group -ml-1.5 flex flex-none">
         <WindowButton
           color="var(--dot-r)"
           icon={X}
@@ -58,12 +84,21 @@ export function TitleBar() {
           label="Mostrar ou ocultar o explorador"
           onClick={toggleExplorer}
         />
-        <WindowButton
-          color="var(--dot-g)"
-          icon={Maximize2}
-          label="Tela cheia"
-          onClick={fullscreen}
-        />
+        {fullscreenOk ? (
+          <WindowButton
+            color="var(--dot-g)"
+            icon={Maximize2}
+            label="Tela cheia"
+            onClick={fullscreen}
+          />
+        ) : (
+          <WindowButton
+            color="var(--dot-g)"
+            icon={SquareTerminal}
+            label="Mostrar ou ocultar o terminal"
+            onClick={() => setTerminal(!terminal)}
+          />
+        )}
       </div>
       <p className="m-0 min-w-0 flex-1 truncate text-center max-md:hidden">
         jose-dev — {editor.active ? baseName(editor.active) : 'boas-vindas'}
