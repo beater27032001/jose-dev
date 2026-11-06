@@ -14,6 +14,10 @@ function linkOf(value: string) {
   if (/^[^@\s]+@[^@\s]+\.\w+$/.test(value)) return { href: `mailto:${value}` }
   if (value.endsWith('.pdf')) return { href: value, download: true }
   if (FILE_MAP.has(value)) return { href: `#/${value}` }
+  // import '../tipos' leva ao arquivo, como ir para a definição
+  const relative = value.replace(/^(\.\.?\/)+/, '')
+  if (relative !== value && FILE_MAP.has(`${relative}.ts`))
+    return { href: `#/${relative}.ts` }
   return null
 }
 
@@ -37,6 +41,12 @@ function TokenSpan({ token }: { token: Token }) {
       {quote}
     </span>
   )
+}
+
+/** Linhas quebradas continuam alinhadas ao recuo da linha original. */
+function hangingIndent(line: Token[]) {
+  const indent = (line[0]?.c.match(/^ */)?.[0].length ?? 0) + 2
+  return { paddingLeft: `${indent}ch`, textIndent: `-${indent}ch` }
 }
 
 /** Coluna do clique, contando o texto da linha até o ponto selecionado. */
@@ -77,7 +87,10 @@ export function CodeView({ path }: { path: string }) {
           >
             {i + 1}
           </span>
-          <code className="min-w-0 flex-1 pr-5 break-words whitespace-pre-wrap">
+          <code
+            className="min-w-0 flex-1 pr-5 break-words whitespace-pre-wrap"
+            style={hangingIndent(line)}
+          >
             {line.length
               ? line.map((t, j) => <TokenSpan key={j} token={t} />)
               : '​'}

@@ -81,7 +81,7 @@ export function WorkbenchProvider({
   tokens: Tokens
   children: React.ReactNode
 }) {
-  const [editor, dispatch] = useReducer(editorReducer, undefined, () =>
+  const [editor, editorDispatch] = useReducer(editorReducer, undefined, () =>
     initialEditor(),
   )
   const theme = useSyncExternalStore(
@@ -100,6 +100,12 @@ export function WorkbenchProvider({
   const [status, setStatus] = useState<string | null>(null)
   const [cursor, setCursor] = useState({ line: 1, col: 1 })
   const statusTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
+
+  // abrir outro arquivo leva o cursor para o começo, como no editor
+  const dispatch = useCallback((action: EditorAction) => {
+    if (action.type === 'open') setCursor({ line: 1, col: 1 })
+    editorDispatch(action)
+  }, [])
 
   const flash = useCallback((message: string) => {
     setStatus(message)
@@ -137,7 +143,7 @@ export function WorkbenchProvider({
           window.open(effect.url, '_blank', 'noopener,noreferrer')
       }
     },
-    [flash],
+    [flash, dispatch],
   )
 
   // O arquivo ativo fica no endereço (#/sobre.md), para dar para compartilhar o link.
@@ -149,7 +155,7 @@ export function WorkbenchProvider({
     fromHash()
     addEventListener('hashchange', fromHash)
     return () => removeEventListener('hashchange', fromHash)
-  }, [])
+  }, [dispatch])
   useEffect(() => {
     const url = editor.active ? `#/${editor.active}` : location.pathname
     if (location.hash !== (editor.active ? url : ''))
