@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { ChevronRight } from 'lucide-react'
 import { motion } from 'motion/react'
@@ -18,7 +18,8 @@ const itemClass =
 
 export function ExplorerTree({ onPick }: { onPick: () => void }) {
   const { editor, dispatch } = useWorkbench()
-  const animate = !booted
+  // decidido uma vez ao montar; recalcular em outro render deixaria os itens presos invisíveis
+  const [animate] = useState(() => !booted)
   useEffect(() => {
     booted = true
   }, [])
