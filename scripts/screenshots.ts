@@ -20,7 +20,7 @@ const palette = (query: string) => async (page: Page) => {
 const terminal =
   (...commands: string[]) =>
   async (page: Page) => {
-    await page.getByRole('button', { name: 'Terminal', exact: true }).click()
+    await page.locator('footer button').click()
     for (const c of commands) {
       await page.keyboard.type(c, { delay: 20 })
       await page.keyboard.press('Enter')
@@ -58,7 +58,8 @@ const SHOTS: Shot[] = [
     width: 390,
     height: 844,
     theme: 'dark',
-    setup: (p) => p.getByRole('button', { name: 'Explorador' }).click(),
+    setup: (p) =>
+      p.getByRole('button', { name: 'Explorador', exact: true }).click(),
   },
 ]
 
