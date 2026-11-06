@@ -47,7 +47,7 @@ function Panel() {
       onClick={() => field.current?.focus()}
       className="flex h-[38dvh] flex-col md:h-[230px]"
     >
-      <div className="flex items-center justify-between border-b border-line px-3 py-1.5 text-[11px] tracking-[.1em] text-muted uppercase">
+      <div className="flex items-center justify-between border-b border-line px-3 py-1.5 text-[11px] font-semibold tracking-[.12em] text-muted uppercase">
         <span className="border-b border-accent pb-px text-fg">Terminal</span>
         <button
           aria-label="Fechar terminal"

@@ -8,7 +8,6 @@
   --bg: #0f1115;
   --side: #14171c;
   --bar: #0b0d10;
-  --tab: #181b21;
   --line: #23272f;
   --fg: #d7dae0;
   --muted: #7d8590;
@@ -30,7 +29,6 @@
   --bg: #fbfbfa;
   --side: #f2f2ef;
   --bar: #e8e8e4;
-  --tab: #efefeb;
   --line: #dcdcd6;
   --fg: #24262b;
   --muted: #5f636b;
@@ -52,7 +50,6 @@
   --color-bg: var(--bg);
   --color-side: var(--side);
   --color-bar: var(--bar);
-  --color-tab: var(--tab);
   --color-line: var(--line);
   --color-fg: var(--fg);
   --color-muted: var(--muted);
