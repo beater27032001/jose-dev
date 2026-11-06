@@ -115,20 +115,23 @@ function Panel() {
 
 export function Terminal() {
   const { terminal } = useWorkbench()
+  // o contêiner existe mesmo fechado: ele é a linha do grid entre o editor e a barra de status
   return (
-    <AnimatePresence initial={false}>
-      {terminal && (
-        <motion.section
-          aria-label="Terminal"
-          className="overflow-hidden border-t border-line bg-bar"
-          initial={{ height: 0 }}
-          animate={{ height: 'auto' }}
-          exit={{ height: 0 }}
-          transition={{ duration: 0.25, ease: EASE }}
-        >
-          <Panel />
-        </motion.section>
-      )}
-    </AnimatePresence>
+    <div>
+      <AnimatePresence initial={false}>
+        {terminal && (
+          <motion.section
+            aria-label="Terminal"
+            className="overflow-hidden border-t border-line bg-bar"
+            initial={{ height: 0 }}
+            animate={{ height: 'auto' }}
+            exit={{ height: 0 }}
+            transition={{ duration: 0.25, ease: EASE }}
+          >
+            <Panel />
+          </motion.section>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }

@@ -26,11 +26,11 @@ export const HELP = [
   ['ls', 'lista os arquivos'],
   ['cat <arquivo>', 'mostra o conteúdo'],
   ['open <arquivo>', 'abre no editor'],
-  ['projetos', 'lista trabalhos e experimentos'],
+  ['projetos', 'lista os projetos'],
   ['whoami', 'quem sou eu'],
   ['contato', 'abre contato.ts'],
   ['email', 'copia o meu e-mail'],
-  ['cv', 'baixa o meu CV em PDF'],
+  ['cv', 'baixa o CV em PDF'],
   ['linkedin · github', 'abre o perfil'],
   ['theme claro|escuro', 'troca o tema'],
   ['clear', 'limpa o terminal'],
@@ -64,7 +64,7 @@ export function run(input: string): Result {
       return {
         lines: [
           { text: 'comandos', tone: 'ok' },
-          ...HELP.map(([c, d]) => ({ text: `  ${c.padEnd(20)}${d}` })),
+          ...HELP.map(([c, d]) => ({ text: `  ${c.padEnd(19)}${d}` })),
         ],
       }
     case 'ls':

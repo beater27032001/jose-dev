@@ -27,7 +27,10 @@ function Empty() {
   return (
     <div className="grid h-full place-items-center p-6 text-center text-muted">
       <div>
-        <p className="m-0 mb-5 font-code text-[clamp(32px,6vw,48px)] font-bold text-line">
+        <p
+          aria-hidden
+          className="m-0 mb-5 font-code text-[clamp(32px,6vw,48px)] font-bold text-line"
+        >
           jose-dev
         </p>
         <ul className="m-0 list-none space-y-2 p-0">
