@@ -35,7 +35,7 @@ Visitado a partir do LinkedIn, do CV (link josepaivadev.com) e de candidaturas. 
 - Precisa funcionar e ser usável no celular.
 - Sem a parte "técnica" de como a página foi feita (o original tinha `COMO-FOI-FEITO.md`; não entra).
 - Projetos em duas pastas: `trabalho/` (produtos reais em produção) e `experimentos/` (páginas de portfólio).
-- Os repositórios dos experimentos são privados e não há demos publicadas: não inventar links.
+- Os experimentos estão publicados (Vercel) com código aberto no GitHub (repositórios públicos desde 2026-11-07); os links ficam em `src/domain/profile.ts`.
 - Canais de contato exibidos: e-mail, LinkedIn, GitHub e CV em PDF (decisão do dono). Telefone e WhatsApp não aparecem na página.
 - Primeira tela: README.md em pré-visualização, como boas-vindas (decisão do dono).
 - No celular: editor completo adaptado, com o explorador em gaveta (decisão do dono).
@@ -62,7 +62,7 @@ Fonte da verdade: CV (`~/Downloads/CV_Jose_Carlos_Paiva_Santos (4).pdf`) e josep
 - **Números do site**: 2 anos de experiência, 20+ projetos, 10+ tecnologias, 3000+ commits.
 - **Trabalhos reais (SouvTech)**: Plataforma de Gestão Arquitetônica; Aplicativo de Relacionamento para Pets; Plataforma de Conexão para Startups e Sócios (com Stripe); Plataforma de Educação Gamificada (com Stripe); Portal de Transparência Municipal (com resumo de documentos por IA); NovoCred (app Android e iOS). Descrições e stacks no site. Sem links públicos.
 - **Depoimento real**: André Campos, CEO da Sous Clinic, sobre o NovoCred: entrega no prazo, solução estável e escalável, "Super recomendo o seu trabalho!".
-- **Experimentos (portfólio)**: Fio Modular FM-6, Halcyon H9, Halo, TAKT 65, Raikō, Lance Prancheta. Produtos fictícios; repositórios privados.
+- **Experimentos (portfólio)**: Fio Modular FM-6, Halcyon H9, Halo, TAKT 65, Raikō, Lance Prancheta. Produtos fictícios; sites na Vercel e repositórios públicos no GitHub.
 - **Contato**: josecarlospaivasantos2001@gmail.com · linkedin.com/in/josec-paivas · github.com/beater27032001 · Recife, PE. CV em PDF disponível.
 - **Foto**: `public/eu.png` (recorte com fundo transparente, vinda de josepaivadev.com).
 - **CV**: `public/cv-jose-paiva.pdf` (contém telefone).

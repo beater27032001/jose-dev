@@ -282,8 +282,11 @@ export interface Experiment {
   name: string
   idea: string
   stack: string[]
-  status: 'pronto' | 'em construção'
+  site: string
 }
+
+export const github = (slug: string) =>
+  `https://github.com/beater27032001/${slug}`
 
 export const EXPERIMENTS: Experiment[] = [
   {
@@ -291,42 +294,42 @@ export const EXPERIMENTS: Experiment[] = [
     name: 'Halcyon H9',
     idea: 'Placa de vídeo fictícia que se desmonta em 3D conforme o scroll, com visão térmica.',
     stack: ['Next.js', 'React Three Fiber', 'Motion', 'Lenis'],
-    status: 'pronto',
+    site: 'https://halcyon-h9.vercel.app',
   },
   {
     slug: 'fio-modular',
     name: 'Fio Modular FM-6',
     idea: 'Sintetizador modular fictício: cabos com física que mudam o áudio de verdade.',
     stack: ['Next.js', 'Tone.js', 'Canvas', 'Motion'],
-    status: 'pronto',
+    site: 'https://fio-modular.vercel.app',
   },
   {
-    slug: 'halo',
+    slug: 'halo-lampada',
     name: 'Halo',
     idea: 'Lâmpada inteligente fictícia: a página começa apagada e o painel muda cor e brilho de verdade.',
     stack: ['Next.js', 'React Three Fiber', 'Motion'],
-    status: 'pronto',
+    site: 'https://halo-lampada.vercel.app',
   },
   {
     slug: 'takt-65',
     name: 'TAKT 65',
-    idea: 'Teclado mecânico fictício jogável, com som diferente para cada tipo de switch.',
-    stack: ['Next.js', 'Web Audio API', 'Motion'],
-    status: 'em construção',
+    idea: 'Teclado mecânico fictício em 3D e jogável, com som diferente para cada tipo de switch.',
+    stack: ['Next.js', 'React Three Fiber', 'Web Audio API', 'Motion'],
+    site: 'https://takt-65.vercel.app',
   },
   {
     slug: 'raiko',
     name: 'Raikō',
-    idea: 'Anime fictício apresentado como mangá, lido da direita para a esquerda.',
-    stack: ['Next.js', 'Canvas', 'Motion'],
-    status: 'em construção',
+    idea: 'Anime fictício apresentado como mangá: capítulo de 11 páginas ilustradas, lido da direita para a esquerda.',
+    stack: ['Next.js', 'Canvas', 'SVG', 'Motion', 'Lenis'],
+    site: 'https://raiko-ashy.vercel.app',
   },
   {
     slug: 'lance-prancheta',
     name: 'Lance Prancheta',
     idea: 'Prancheta tática com jogadas animadas, narração passo a passo e jogadores arrastáveis.',
     stack: ['Next.js', 'SVG', 'Motion'],
-    status: 'em construção',
+    site: 'https://lance-prancheta.vercel.app',
   },
 ]
 

@@ -5,6 +5,7 @@ import {
   EDUCATION,
   EXPERIENCE,
   EXPERIMENTS,
+  github,
   LANGUAGES,
   NUMBERS,
   PERSON,
@@ -163,8 +164,8 @@ export interface Experimento {
   nome: string
   ideia: string
   stack: string[]
-  status: 'pronto' | 'em construção'
-  repositorio: 'privado'
+  site: string
+  codigo: string
 }
 `
 
@@ -189,8 +190,8 @@ export const experimento: Experimento = {
   nome: ${q(e.name)},
   ideia: ${q(e.idea)},
   stack: ${list(e.stack)},
-  status: ${q(e.status)},
-  repositorio: 'privado',
+  site: ${q(e.site)},
+  codigo: ${q(github(e.slug))},
 }
 `
 
