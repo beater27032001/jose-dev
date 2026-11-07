@@ -8,3 +8,5 @@ next-env.d.ts
 .shots
 .impeccable/review
 .impeccable/questions
+.vercel
+.env*
